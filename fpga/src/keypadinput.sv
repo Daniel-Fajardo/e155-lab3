@@ -1,0 +1,116 @@
+module keypadinput(
+    input logic clk,
+    input logic reset,
+    input logic [3:0] row,
+    output logic [3:0] col,
+    output logic [3:0] hex
+);
+    logic [2:0] state, nextstate
+    logic [3:0] prev;
+
+    always_ff @(posedge clk, posedge reset)
+	    if (reset) state <= 3'b000;
+	    else state <= nextstate;
+
+    always_comb
+        case (state)
+            // cases 0-3 cycles through turning each col on and checking if any row is on
+            0: if (~(row[0]&row[1]&row[2]&row[3])) nextstate <= 1;
+                else begin nextstate <= 4;
+                    col <= 4'b0001; end
+            1: if (~(row[0]&row[1]&row[2]&row[3])) nextstate <= 2;
+                else begin nextstate <= 4;
+                    col <= 4'b0010; end
+            2: if (~(row[0]&row[1]&row[2]&row[3])) nextstate <= 3;
+                else begin nextstate <= 4;
+                    col <= 4'b0100; end
+            3: if (~(row[0]&row[1]&row[2]&row[3])) nextstate <= 0;
+                else begin nextstate <= 4;
+                    col <= 4'b1000; end
+
+            // case 4 checks which row is on and records the corresponding hex digit
+            4: if (col==4'b0001) begin
+                    if (row[0]) hex <= 4'b1010; // A
+                    else if (row[1]) hex <= 4'b0111; // 7
+                    else if (row[2]) hex <= 4'b0100; // 4
+                    else if (row[3]) hex <= 4'b0001; // 1
+                    else hex <= 4'b0000;
+                    end
+                else if (col== 4'b0010) begin
+                    if (row[0]) hex <= 4'b0000; // 0
+                    else if (row[1]) hex <= 4'b1000; // 8
+                    else if (row[2]) hex <= 4'b0101; // 5
+                    else if (row[3]) hex <= 4'b0010; // 2
+                    else hex <= 4'bxxxx;
+                    end
+                else if (col== 4'b0100) begin
+                    if (row[0]) hex <= 4'b1011; // B
+                    else if (row[1]) hex <= 4'b1001; // 9
+                    else if (row[2]) hex <= 4'b0110; // 6
+                    else if (row[3]) hex <= 4'b0011; // 3
+                    else hex <= 4'bxxxx;
+                    end
+                else if (col== 4'b1000) begin
+                    if (row[0]) hex <= 4'b1111; // F
+                    else if (row[1]) hex <= 4'b1110; // E
+                    else if (row[2]) hex <= 4'b1101; // D
+                    else if (row[3]) hex <= 4'b1100; // C
+                    else hex <= 4'bxxxx;
+                    end
+                else hex <= 4'bxxxx;
+                prev <= row;
+                nextstate <= 5;
+            // case 5 will hold until the current button is released
+            5: if (prev[0]&row[0]) nextstate <= 5;
+                else if (prev[1]&row[1]) nextstate <= 5;
+                else if (prev[2]&row[2]) nextstate <= 5;
+                else if (prev[3]&row[3]) nextstate <= 5;
+                else nextstate <= 0;
+            default:
+                nextstate <= 0;
+        endcase
+    endmodule
+
+
+
+
+
+
+
+/*                if (c0) begin 
+                    if (r0) hex <= 4'b1010;
+                    else if (r1) hex <= 4'b0111;
+                    else if (r2) hex <= 4'b0100;
+                    else if (r3) hex <= 4'b0001;
+                    else hex <= 4'b0000;
+                    c0 <= 0;
+                    c1 <= 1;
+                    end
+                else if (c1) begin*/
+
+
+
+    
+/*    always_comb
+        case (key)
+            8'b10010000: hex <= 4'b0000; // 0
+            8'b01000010: hex <= 4'b0001; // 1
+            8'b00010010: hex <= 4'b0010; // 2
+            8'b00000110: hex <= 4'b0011; // 3
+            8'b01001000: hex <= 4'b0100; // 4
+            8'b00011000: hex <= 4'b0101; // 5
+            8'b00001100: hex <= 4'b0110; // 6
+            8'b01100000: hex <= 4'b0111; // 7
+
+            8'b00110000: hex <= 4'b1000; // 8
+            8'b00100100: hex <= 4'b1001; // 9
+            8'b11000000: hex <= 4'b1010; // A
+            8'b10000100: hex <= 4'b1011; // B
+            8'b00000011: hex <= 4'b1100; // C
+            8'b00001001: hex <= 4'b1101; // D
+            8'b00100001: hex <= 4'b1110; // E
+            8'b10000001: hex <= 4'b1111; // F
+            default: hex <= 4'b0000;
+        endcase
+*/
+endmodule
