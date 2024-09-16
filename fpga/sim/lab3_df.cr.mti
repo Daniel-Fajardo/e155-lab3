@@ -1,0 +1,22 @@
+C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/lab3_df.sv {1 {vlog -work work -vopt -sv -stats=none {C:\Users\danie\OneDrive\Documents\MicroP\Lab3\fpga\src\lab3_df.sv}
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/clockdivider.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/clockdivider.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module clockdivider
+
+Top level modules:
+	clockdivider
+
+} {} {}} C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/segmentlogic.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/segmentlogic.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module segmentlogic
+
+Top level modules:
+	segmentlogic
+
+} {} {}}

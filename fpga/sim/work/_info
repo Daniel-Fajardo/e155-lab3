@@ -1,6 +1,18 @@
 m255
 K4
 z2
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+!s12c _opt2
+R1
+Z2 !s12c _opt
+R1
+R0
+R1
+R0
+R1
+R2
+R1
 !s11f vlog 2024.2 2024.05, May 20 2024
 13
 !s112 1.1
@@ -8,54 +20,149 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/radiant_project/lab3_df
+Z3 dC:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/radiant_project/lab3_df
+T_opt
+!s110 1726528695
+VO?@Tkh07;_L899?m;:RIo1
+Z4 04 3 4 work top fast 0
+=1-f09e4a0dfef3-66e8bcb6-3e6-9dcc
+R1
+Z5 !s12f OEM25U3 
+Z6 !s12b OEM100
+Z7 !s124 OEM100
+Z8 !s135 nogc
+Z9 o-quiet -auto_acc_if_foreign -work work -L iCE40UP
+Z10 tCvgOpt 0
+n@_opt
+Z11 OL;O;2024.2;79
+R3
+T_opt1
+!s110 1726529859
+VDM3fjoLN=4NeSam4BXINZ3
+R4
+=1-f09e4a0dfef3-66e8c143-12b-94d0
+R1
+R5
+R6
+R7
+R8
+o-quiet -auto_acc_if_foreign -work work -L iCE40UP +acc
+R10
+n@_opt1
+R11
+R3
+T_opt2
+!s110 1726528969
+VY<Pg<c6jAL69c[`[Z82a02
+04 12 4 work clockdivider fast 0
+=1-f09e4a0dfef3-66e8bdc9-1b6-6cf0
+R1
+!s12f OEM25U1 
+R6
+R7
+R8
+R9
+R10
+n@_opt2
+R11
+R3
 vclockdivider
 2C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/clockdivider.sv
-Z0 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z1 !s110 1726526901
+Z12 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1726530755
 !i10b 1
 !s100 ^OQ_SLbdVRoo754;[:P3M2
 I8PdaH87^Gn^Y;G:i`GXi82
 S1
-Z2 dC:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/sim
+Z13 dC:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/sim
 w1726526305
 8C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/clockdivider.sv
 FC:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/clockdivider.sv
-!i122 0
+!i122 26
 L0 1 17
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-Z4 OL;L;2024.2;79
+Z14 VDg1SIo80bB@j0V0VzS_@n1
+Z15 OL;L;2024.2;79
 r1
 !s85 0
 31
-!s108 1726526900.000000
+!s108 1726530755.000000
 !s107 C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/clockdivider.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/clockdivider.sv|
 !i113 0
-Z5 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z6 tCvgOpt 0
+Z16 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R10
+vkeypadinput
+2C:\Users\danie\OneDrive\Documents\MicroP\Lab3\fpga\src\keypadinput.sv
+R12
+!s110 1726528676
+!i10b 1
+!s100 d<Sd:eUJdh@P04Ed@J3JD3
+IX6G[d6OM]z>HeNR5O923o1
+S1
+R13
+w1726528101
+8C:\Users\danie\OneDrive\Documents\MicroP\Lab3\fpga\src\keypadinput.sv
+FC:\Users\danie\OneDrive\Documents\MicroP\Lab3\fpga\src\keypadinput.sv
+!i122 17
+L0 1 117
+R14
+R15
+r1
+!s85 0
+31
+!s108 1726528676.000000
+!s107 C:\\Users\\danie\\OneDrive\\Documents\\MicroP\\Lab3\\fpga\\src\\keypadinput.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:\Users\danie\OneDrive\Documents\MicroP\Lab3\fpga\src\keypadinput.sv|
+!i113 0
+R16
+R10
 vsegmentlogic
 2C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/segmentlogic.sv
-R0
-R1
+R12
+Z17 !s110 1726530756
 !i10b 1
 !s100 oU2i11cKQz_zX9]J>;1Ti1
 IgDnaZMIO:Oc_VQ;M;N>]43
 S1
-R2
+R13
 w1725854267
 8C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/segmentlogic.sv
 FC:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/segmentlogic.sv
-!i122 1
+!i122 28
 L0 1 27
-R3
-R4
+R14
+R15
 r1
 !s85 0
 31
-!s108 1726526901.000000
+Z18 !s108 1726530756.000000
 !s107 C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/segmentlogic.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/segmentlogic.sv|
 !i113 0
-R5
-R6
+R16
+R10
+vtop
+2C:\Users\danie\OneDrive\Documents\MicroP\Lab3\fpga\src\lab3_df.sv
+R12
+R17
+!i10b 1
+!s100 fMUk815n87bGIjZXAZToj1
+I6oUlhQCi;eW;3T:=HGj]`0
+S1
+R13
+w1726527038
+8C:\Users\danie\OneDrive\Documents\MicroP\Lab3\fpga\src\lab3_df.sv
+FC:\Users\danie\OneDrive\Documents\MicroP\Lab3\fpga\src\lab3_df.sv
+!i122 27
+L0 1 21
+R14
+R15
+r1
+!s85 0
+31
+R18
+!s107 C:\\Users\\danie\\OneDrive\\Documents\\MicroP\\Lab3\\fpga\\src\\lab3_df.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:\Users\danie\OneDrive\Documents\MicroP\Lab3\fpga\src\lab3_df.sv|
+!i113 0
+R16
+R10

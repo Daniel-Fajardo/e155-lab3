@@ -19,3 +19,255 @@
 # Compile of lab3_df.sv failed with 1 errors.
 # Compile of segmentlogic.sv was successful.
 # 4 compiles, 2 failed with 5 errors.
+# Compile of clockdivider.sv was successful.
+# Compile of keypadinput.sv failed with 2 errors.
+# Compile of lab3_df.sv was successful.
+# Compile of segmentlogic.sv was successful.
+# 4 compiles, 1 failed with 2 errors.
+# Compile of clockdivider.sv was successful.
+# Compile of keypadinput.sv failed with 2 errors.
+# Compile of lab3_df.sv was successful.
+# Compile of segmentlogic.sv was successful.
+# 4 compiles, 1 failed with 2 errors.
+# Compile of clockdivider.sv was successful.
+# Compile of keypadinput.sv was successful.
+# Compile of lab3_df.sv was successful.
+# Compile of segmentlogic.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.top -L iCE40UP
+# vsim -gui work.top -L iCE40UP 
+# Start time: 15:55:18 on Sep 16,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.top(fast)
+# Loading iCE40UP.HSOSC(fast)
+add wave -position end sim:/top/*
+force reset 0
+force row 0000
+run 100
+run 100000
+run 100000
+run 1000000000
+# Causality operation skipped due to absence of debug database file
+vsim -gui -L iCE40UP work.keypadinput
+# End time: 16:00:19 on Sep 16,2024, Elapsed time: 0:05:01
+# Errors: 0, Warnings: 8
+# vsim -gui -L iCE40UP work.keypadinput 
+# Start time: 16:00:19 on Sep 16,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.keypadinput(fast)
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+force clk 1
+force reset 0
+force row 0000
+add wave -position end sim:/keypadinput/*
+run 1000000000
+force clk 0
+run 1000
+force clk 1
+run 1000
+force row 0001
+force clk 0
+run 100
+force clk 1
+run 100
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.keypadinput(fast)
+force clk 0
+force reset 0
+force row 0000
+run 10000
+force clk 1
+run 10000
+add wave -position end sim:/std/*
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/std/*'.
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.keypadinput(fast)
+# Compile of clockdivider.sv was successful.
+# Compile of keypadinput.sv was successful.
+# Compile of lab3_df.sv was successful.
+# Compile of segmentlogic.sv was successful.
+# 4 compiles, 0 failed with no errors.
+force clk 0
+force reset 0
+force reset 1
+force row 0000
+run 10000
+run 100000000
+run 100000000
+run 100000000
+run 100000000
+run 100000000
+run 100000000
+
+run 100000000
+
+run 100000000
+force row 0001
+force clk 0
+run 100000000
+force clk 1
+force reset 0
+run 100000000
+force clk 0
+run 100000000
+force clk 1
+run 100000000
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.keypadinput(fast)
+force reset 1
+run 1000
+force reset 0
+force clk 1
+force row 0000
+run 1000
+force clk 0
+run 1000
+force clk 1
+force row 0001
+run 1000
+force clk 0
+run 1000
+force clk 1
+run 1000
+# Compile of clockdivider.sv was successful.
+# Compile of keypadinput.sv was successful.
+# Compile of lab3_df.sv was successful.
+# Compile of segmentlogic.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui -L iCE40UP work.top
+# End time: 16:18:14 on Sep 16,2024, Elapsed time: 0:17:55
+# Errors: 0, Warnings: 2
+# vsim -gui -L iCE40UP work.top 
+# Start time: 16:18:14 on Sep 16,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.top(fast)
+# Loading iCE40UP.HSOSC(fast)
+add wave -position end sim:/top/*
+force reset 1
+force clk 0
+# ** UI-Msg (Error) (suppressible): (vsim-4008) Object 'clk' not found.
+# 
+force row 0000
+run 1000
+force reset 0
+run 1000
+run 10000000
+vsim -gui -L iCE40UP work.clockdivider
+# End time: 16:22:48 on Sep 16,2024, Elapsed time: 0:04:34
+# Errors: 0, Warnings: 1
+# vsim -gui -L iCE40UP work.clockdivider 
+# Start time: 16:22:48 on Sep 16,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.clockdivider(fast)
+# Loading iCE40UP.HSOSC(fast)
+add wave -position end sim:/clockdivider/*
+force reset 1
+run 10000000
+force reset 0
+run 10000000
+run 10000000
+run 10000000
+
+run 10000000
+vsim -gui -L iCE40UP work.top
+# End time: 16:24:23 on Sep 16,2024, Elapsed time: 0:01:35
+# Errors: 0, Warnings: 1
+# vsim -gui -L iCE40UP work.top 
+# Start time: 16:24:23 on Sep 16,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.top(fast)
+# Loading iCE40UP.HSOSC(fast)
+force reset 1
+force row 0000
+run 100000000
+add wave -position end sim:/top/*
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.top(fast)
+# Loading iCE40UP.HSOSC(fast)
+force reset 1
+run 100000000
+force reset 0
+run 100000000
+force row 0000
+run 100000000
+force row 0001
+run 100000000
+force row 0000
+run 100000000
+force row 0100
+run 100000000
+run 100000000
+force row 1000
+run 100000000
+add wave -position end sim:/top/clockdivider/*
+run 100000000
+vsim -gui -L iCE40UP work.top -voptargs=+acc
+# End time: 16:37:38 on Sep 16,2024, Elapsed time: 0:13:15
+# Errors: 0, Warnings: 1
+# vsim -gui -L iCE40UP work.top -voptargs="+acc" 
+# Start time: 16:37:38 on Sep 16,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "keypadinput(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.top(fast)
+# Loading work.clockdivider(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.keypadinput(fast)
+# Loading work.segmentlogic(fast)
+add wave -position insertpoint  \
+sim:/top/reset \
+sim:/top/row \
+sim:/top/seg \
+sim:/top/anode1 \
+sim:/top/anode2 \
+sim:/top/col \
+sim:/top/clk \
+sim:/top/hex \
+sim:/top/int_osc \
+sim:/top/counter
+run 10000
+force reset 1
+run 10000
+run 100000000
+force reset 0
+run 100000000
+force row 0000
+run 100000000
+force row 0001
+run 100000000
+force row 0000
+# ** UI-Msg (Error) (suppressible): (vsim-4008) Object 'row' not found.
+# 
+run 100000000
+# Compile of clockdivider.sv was successful.
+# Compile of keypadinput.sv failed with 3 errors.
+# Compile of lab3_df.sv was successful.
+# Compile of segmentlogic.sv was successful.
+# Compile of hexfsm.sv failed with 1 errors.
+# 5 compiles, 2 failed with 4 errors.
+# Compile of clockdivider.sv was successful.
+# Compile of keypadinput.sv failed with 1 errors.
+# Compile of lab3_df.sv was successful.
+# Compile of segmentlogic.sv was successful.
+# Compile of hexfsm.sv failed with 1 errors.
+# 5 compiles, 2 failed with 2 errors.
+# Compile of clockdivider.sv was successful.
+# Compile of keypadinput.sv failed with 1 errors.
+# Compile of lab3_df.sv was successful.
+# Compile of segmentlogic.sv was successful.
+# Compile of hexfsm.sv failed with 1 errors.
+# 5 compiles, 2 failed with 2 errors.
