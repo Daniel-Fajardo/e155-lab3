@@ -1,5 +1,5 @@
 module hexfsm(
-    input logic [3:0] col,
+    input logic [3:0] col, row,
     output logic [3:0] hex
 );
     always_comb

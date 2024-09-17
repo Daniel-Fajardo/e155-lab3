@@ -29,7 +29,7 @@ module keypadinput(
                     col <= 4'b1000; end
 
             // case 4 checks which row is on and records the corresponding hex digit
-            4: begin hexfsm hexfsm(col[3:0], hex[3:0]);
+            4: begin hexfsm hexfsm(col[3:0], row[3:0], hex[3:0]);
                 prev <= row;
                 nextstate <= 5;
 		end
