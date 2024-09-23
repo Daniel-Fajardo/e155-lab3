@@ -1,3 +1,8 @@
+// Daniel Fajardo
+// dfajardo@g.hmc.edu
+// 09/08/2024
+//
+// logic for mapping input binary bits to hexadecimal bit on 7-segment display
 module segmentlogic(
     	input logic [3:0] s,
     	output logic [6:0] seg

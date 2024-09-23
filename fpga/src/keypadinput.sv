@@ -1,3 +1,8 @@
+// Daniel Fajardo
+// dfajardo@g.hmc.edu
+// 09/22/2024
+//
+// the fsm for sensing a button push on the keypad
 module keypadinput(
     input logic clk,
     input logic reset,
@@ -8,8 +13,8 @@ module keypadinput(
     logic [3:0] state, nextstate;
     // logic [3:0] prev;
 
-    always_ff @(posedge clk, posedge reset)
-	    if (reset) begin state <= 4'b0000;
+    always_ff @(posedge clk)
+	    if (!reset) begin state <= 4'b0000;
             // col <= 4'b0001;
             end
 	    else state <= nextstate;

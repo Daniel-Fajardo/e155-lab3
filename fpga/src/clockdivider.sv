@@ -1,3 +1,8 @@
+// Daniel Fajardo
+// dfajardo@g.hmc.edu
+// 09/22/2024
+//
+// utilizes HSOSC to regulate the frequency of the clock
 module clockdivider(
 	input logic reset,
 	output logic clk,
@@ -9,9 +14,9 @@ module clockdivider(
 	HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 	
 	// Simple clock divider
-	always_ff @(posedge int_osc, posedge reset) begin
-		if (reset) 	counter <= 0;
+	always_ff @(posedge int_osc) begin
+		if (!reset) 	counter <= 0;
 		else 		counter <= counter + 1;
 		end
-	assign clk = counter[9];
+	assign clk = counter[2];
 endmodule

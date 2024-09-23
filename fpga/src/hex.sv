@@ -1,10 +1,15 @@
+// Daniel Fajardo
+// dfajardo@g.hmc.edu
+// 09/22/2024
+//
+// this module records the last two hex signals by recording the most recent input and shifting the other
 module hex(
     input logic clk, reset,
     input logic [3:0] hex,
     output logic [3:0] hex1, hex2
 );
-    always_ff @(posedge clk, posedge reset) begin
-        if (reset) begin
+    always_ff @(posedge clk) begin
+        if (!reset) begin
             hex2 <= 4'b0000;
             hex1 <= 4'b0000;
             end

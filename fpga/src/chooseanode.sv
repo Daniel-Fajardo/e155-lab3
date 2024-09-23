@@ -1,3 +1,8 @@
+// Daniel Fajardo
+// dfajardo@g.hmc.edu
+// 09/22/2024
+//
+// this module will output one of two 4-bit inputs and one of two anodes on each positive clock edge
 module chooseanode(
     	input logic clk, reset,
 		input logic [3:0] s1, s2,
