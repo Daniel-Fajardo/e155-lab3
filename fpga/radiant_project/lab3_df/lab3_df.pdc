@@ -1,4 +1,4 @@
-ldc_set_location -site {10} [get_ports reset]
+ldc_set_location -site {34} [get_ports reset]
 ldc_set_location -site {21} [get_ports {row[0]}]
 ldc_set_location -site {6} [get_ports {row[1]}]
 ldc_set_location -site {4} [get_ports {row[2]}]

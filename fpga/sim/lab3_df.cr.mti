@@ -1,9 +1,30 @@
-C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/keypadinput_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/keypadinput_tb.sv
+C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/mux.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/mux.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module mux
+
+Top level modules:
+	mux
+
+} {} {}} C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/clockdivider.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/clockdivider.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module clockdivider
+
+Top level modules:
+	clockdivider
+
+} {} {}} C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/keypadinput_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/keypadinput_tb.sv
 Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
 -- Compiling module keypadinput_tb
 
 Top level modules:
 	keypadinput_tb
+
+} {} {}} C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/chooseanode.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/chooseanode.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module chooseanode
+
+Top level modules:
+	chooseanode
 
 } {} {}} C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/lab3_df_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/lab3_df_tb.sv
 Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
@@ -11,5 +32,12 @@ Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
 
 Top level modules:
 	lab3_df_tb
+
+} {} {}} C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/hex.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/danie/OneDrive/Documents/MicroP/Lab3/fpga/src/hex.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module hex
+
+Top level modules:
+	hex
 
 } {} {}}

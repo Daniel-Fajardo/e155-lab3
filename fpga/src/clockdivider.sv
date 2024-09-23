@@ -18,5 +18,5 @@ module clockdivider(
 		if (!reset) 	counter <= 0;
 		else 		counter <= counter + 1;
 		end
-	assign clk = counter[2];
+	assign clk = counter[9];
 endmodule

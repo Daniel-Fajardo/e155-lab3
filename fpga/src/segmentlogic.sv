@@ -7,6 +7,7 @@ module segmentlogic(
     	input logic [3:0] s,
     	output logic [6:0] seg
 );
+    // 
     // combinational logic for 7-segment display
     always_comb begin
         case(s)
