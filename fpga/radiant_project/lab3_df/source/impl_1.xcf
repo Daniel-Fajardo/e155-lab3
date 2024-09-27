@@ -18,7 +18,7 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>../../impl_1/lab3_df_impl_1.bin</File>
-			<FileTime>09/23/24 15:29:25</FileTime>
+			<FileTime>09/24/24 16:08:54</FileTime>
 			<JedecChecksum>0xA980</JedecChecksum>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>

@@ -8,7 +8,8 @@ module keypadinput(
     input logic reset,
     input logic [3:0] row,
     output logic [3:0] col,
-    output logic [3:0] hex
+    output logic [3:0] hex,
+    output logic hexen, colen
 );
     logic [3:0] state, nextstate;
     // logic [3:0] prev;
@@ -71,13 +72,13 @@ module keypadinput(
         case (state)
             // cases 0-3 cycles through turning each col on and checking if any row is on
             0: begin col <= 4'b0001; 
-                hex <= hex; end
-            1: begin col <= 4'b0010; 
-                hex <= hex; end
+                hex <= 4'b0000; end // not enabled
+            1: begin col <= 4'b0010;
+                hex <= 4'b0000; end // not enabled
             2: begin col <= 4'b0100; 
-                hex <= hex; end
+                hex <= 4'b0000; end // not enabled
             3: begin col <= 4'b1000;
-                hex <= hex; end
+                hex <= 4'b0000; end // not enabled
             // cases 4-7 cycle through rows to see which is on and then sets the hex value
             4: if (row[0]) begin hex <= 4'b1010; // A
                     col <= 4'b0001; end
@@ -87,7 +88,7 @@ module keypadinput(
                     col <= 4'b0001; end
                 else if (row[3]) begin hex <= 4'b0001; // 1
                     col <= 4'b0001; end
-                else begin hex <= hex;
+                else begin hex <= 4'b0000;
                     col <= 4'b0001; end
             5: if (row[0]) begin hex <= 4'b0000; // 0
                     col <= 4'b0010; end
@@ -97,7 +98,7 @@ module keypadinput(
                     col <= 4'b0010; end
                 else if (row[3]) begin hex <= 4'b0010; // 2
                     col <= 4'b0010; end
-                else begin hex <= hex;
+                else begin hex <= 4'b0000;
                     col <= 4'b0010; end
             6: if (row[0]) begin hex <= 4'b1011; // B
                     col <= 4'b0100; end
@@ -107,7 +108,7 @@ module keypadinput(
                     col <= 4'b0100; end
                 else if (row[3]) begin hex <= 4'b0011; // 3
                     col <= 4'b0100; end
-                else begin hex <= hex;
+                else begin hex <= 4'b0000;
                     col <= 4'b0100; end
             7: if (row[0]) begin hex <= 4'b1111; // F
                     col <= 4'b1000; end
@@ -117,23 +118,54 @@ module keypadinput(
                     col <= 4'b1000; end
                 else if (row[3]) begin hex <= 4'b1100; // C
                     col <= 4'b1000; end
-                else begin hex <= hex;
+                else begin hex <= 4'b0000;
                     col <= 4'b1000; end
             // hold state, if row is same as it was previously
-            8: begin hex <= hex;
-                col <= col; end
-            9: begin hex <= hex;
-                col <= col; end
-            10: begin hex <= hex;
-                col <= col; end
-            11: begin hex <= hex;
-                col <= col; end
-            default: begin hex <= hex;
+            8: begin hex <= 4'b0000; // not enabled
+                col <= 4'b0000; end
+            9: begin hex <= 4'b0000; // not enabled
+                col <= 4'b0000; end
+            10: begin hex <= 4'b0000; // not enabled
+                col <= 4'b0000; end
+            11: begin hex <= 4'b0000; // not enabled
+                col <= 4'b0000; end
+            default: begin hex <= 4'b0000;
                 col <= 4'b0001; end
         endcase
-
-
-
+    // enables hex output to be read. Used to avoid latches
+    always_comb
+        case(state)
+            0: hexen <= 0;
+            1: hexen <= 0;
+            2: hexen <= 0;
+            3: hexen <= 0;
+            4: hexen <= 1;
+            5: hexen <= 1;
+            6: hexen <= 1;
+            7: hexen <= 1;
+            8: hexen <= 0;
+            9: hexen <= 0;
+            10: hexen <= 0;
+            11: hexen <= 0;
+            default: hexen <= 0;
+        endcase
+    // enables column output to be read. Used to avoid latches
+    always_comb
+        case(state)
+            0: colen <= 1;
+            1: colen <= 1;
+            2: colen <= 1;
+            3: colen <= 1;
+            4: colen <= 1;
+            5: colen <= 1;
+            6: colen <= 1;
+            7: colen <= 1;
+            8: colen <= 0;
+            9: colen <= 0;
+            10: colen <= 0;
+            11: colen <= 0;
+            default: colen <= 0;
+        endcase
 /*    always_comb
         case (state)
             // cases 0-3 cycles through turning each col on and checking if any row is on
