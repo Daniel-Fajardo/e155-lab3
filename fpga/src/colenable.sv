@@ -1,7 +1,7 @@
 // Daniel Fajardo
 // dfajardo@g.hmc.edu
 // 09/22/2024
-//
+// THIS MODULE IS NOT USED
 // this module simply updates column output when enabled
 module colenable(
     input logic clk,

@@ -1,0 +1,42 @@
+# Current time Mon Sep 30 15:35:09 2024
+# Program = vish
+# Id = "2024.2"
+# Version = "2024.05"
+# Date = "May 20 2024"
+# Platform = win64
+
+Exception c0000005 has occurred at address 5c5f4c25. Traceback:
+# 0    0x5c5f4c25: 'Tcl_ListObjReplace + 0x255'
+# 1    0x5c5fff7e: 'TclGetNamespaceChildTable + 0x24e'
+# 2    0x5c5c2d74: 'Tcl_NRExprObj + 0x9344'
+# 3    0x5c548bfc: 'TclNRRunCallbacks + 0x5c'
+# 4    0x7fffc68ef384: 'Itcl_EvalMemberCode + 0x384'
+# 5    0x7fffc68f035d: 'Itcl_ExecMethod + 0x20d'
+# 6    0x5c548bfc: 'TclNRRunCallbacks + 0x5c'
+# 7    0x7fffc68ef384: 'Itcl_EvalMemberCode + 0x384'
+# 8    0x7fffc68f035d: 'Itcl_ExecMethod + 0x20d'
+# 9    0x5c548bfc: 'TclNRRunCallbacks + 0x5c'
+# 10   0x7fffc68ef384: 'Itcl_EvalMemberCode + 0x384'
+# 11   0x7fffc68f035d: 'Itcl_ExecMethod + 0x20d'
+# 12   0x7fffc68f71b5: 'Itcl_EvalArgs + 0x1a5'
+# 13   0x7fffc68f2baa: 'Itcl_HandleInstance + 0x29a'
+# 14   0x5c548bfc: 'TclNRRunCallbacks + 0x5c'
+# 15   0x7fffc68ef384: 'Itcl_EvalMemberCode + 0x384'
+# 16   0x7fffc68f035d: 'Itcl_ExecMethod + 0x20d'
+# 17   0x7fffc68f71b5: 'Itcl_EvalArgs + 0x1a5'
+# 18   0x7fffc68f2baa: 'Itcl_HandleInstance + 0x29a'
+# 19   0x5c548bfc: 'TclNRRunCallbacks + 0x5c'
+# 20   0x5c548bfc: 'TclNRRunCallbacks + 0x5c'
+# 21   0x5c63b104: 'TclServiceIdle + 0xb74'
+# 22   0x5c63a5ff: 'TclServiceIdle + 0x6f'
+# 23   0x5c600e13: 'Tcl_DoOneEvent + 0x193'
+# 24   0x5c3cb655: 'Tk_MainLoop + 0x25'
+# 25   0x5c40d972: 'Tk_MainEx + 0x932'
+# 26   0x140112b82: 'mti_RPC + 0x22702'
+# 27   0x140111198: 'mti_RPC + 0x20d18'
+# 28   0x140773a38: 'Tclsqlite3_Init + 0x19da8'
+# 29   0x7fffd3ab257d: 'BaseThreadInitThunk + 0x1d'
+# 30   0x7fffd5dcaf28: 'RtlUserThreadStart + 0x28'
+StackWalk failed 0
+# End of Stack Trace
+

@@ -1,3 +1,8 @@
+// Daniel Fajardo
+// dfajardo@g.hmc.edu
+// 09/22/2024
+//
+// testbench for top level module
 `timescale 1ns/1ns
 `default_nettype none
 `define N_TV 8
@@ -27,6 +32,10 @@ module lab3_df_tb();
         row = 4'b0001; #300;
         row = 4'b0000; #200;
         row = 4'b1000; #300;
+        row = 4'b0100; #500;
+        row = 4'b0001; #500;
+        row = 4'b1001; #500;
+        
 
 
         end

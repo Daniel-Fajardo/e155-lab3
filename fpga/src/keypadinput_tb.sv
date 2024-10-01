@@ -1,3 +1,8 @@
+// Daniel Fajardo
+// dfajardo@g.hmc.edu
+// 09/22/2024
+//
+// testbench for the keypadinput module
 `timescale 1ns/1ns
 `default_nettype none
 `define N_TV 8
